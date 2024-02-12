@@ -1,0 +1,20 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <%= render @user %>
+
+    <h2 class="py-2 text-2xl font-bold">Reviews</h2>
+
+    <div class="py-2 border border-gray-100">
+      <%= render partial: "reviews/review", collection: @user.reviews %>
+    </div>
+
+    <h2 class="py-2 text-2xl font-bold">Favorite Movies</h2>
+    <ul class="pt-2">
+      <% @favorite_movies.each do |movie| %>
+        <div class="flex">
+          <%= link_to image_tag(movie.image), movie_path(movie), class: "w-32" %>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+</div>

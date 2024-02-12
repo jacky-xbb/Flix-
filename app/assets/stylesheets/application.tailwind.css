@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-400 text-white rounded;
+  }
+
+  .btn {
+    @apply rounded-md bg-primary-light px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-x-0.5 rounded-md  px-2 py-1 text-sm font-medium text-gray-600 lg:text-base lg:px-4 lg:py-2
+  }
+}
+

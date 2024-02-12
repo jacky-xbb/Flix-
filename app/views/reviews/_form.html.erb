@@ -1,0 +1,22 @@
+<%= form_with(model: [@movie, review], class: "contents") do |form| %>
+
+  <%= render "shared/errors", object: review %>
+
+  <div class="my-5">
+     <label>Stars</label>
+      <% 1.upto(5) do |star| %>
+        <%= form.radio_button :stars, star, id: "rating_#{star}" %>
+        <%= form.label "rating_#{star}", star.to_s %>
+      <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "btn-primary" %>
+  </div>
+
+<% end %>

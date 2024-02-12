@@ -1,0 +1,11 @@
+<div class="w-full">
+  <div id="movies" class="min-w-full">
+    <%= render @movies %>
+  </div>
+
+  <% if current_user&.admin? %>
+    <div class="flex justify-center items-center pb-6">
+      <%= link_to "Create a movie", new_movie_path, class: "btn-primary" %>
+    </div>
+  <% end %>
+</div>

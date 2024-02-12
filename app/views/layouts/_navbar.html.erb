@@ -1,0 +1,21 @@
+<nav class="sticky top-0" data-controller="menu">
+  <div class="pl-3 pr-6 py-5 bg-primary-light flex justify-between">
+    <%= link_to image_tag("logo.png", alt: "Flix Logo"), root_path, class: "w-40" %>
+    <div>
+      <div class="px-4 cursor-pointer md:hidden" data-action="click->menu#toggle" id="burger">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </div>
+      <ul id="menu" data-menu-target="menu" class="pt-4 text-left text-sm hidden gap-4 md:flex">
+        <% if signed_in? %>
+          <li class="py-1"><%= current_user.email %></li>
+          <li><%= button_to "Sign out", sign_out_path, method: :delete  %></li>
+        <% else %>
+          <li class="py-1"><%= link_to "Sign in", sign_in_path %></li>
+          <li class="py-1"><%= link_to "Sign up", sign_up_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

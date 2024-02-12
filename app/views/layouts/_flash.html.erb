@@ -1,0 +1,6 @@
+<div id="flash">
+  <% flash.each do |message_type, message| %>
+    <div class="<%= flash_classname(message_type) %>">
+      <%= message %>
+    </div>
+  <% end %>
