@@ -9,7 +9,7 @@
 ## Setup
 ```shell
 bundle install
-rails db:create && rails db:migrate
+rails db:create db:migrate
 rails db:seed
 ```
 
