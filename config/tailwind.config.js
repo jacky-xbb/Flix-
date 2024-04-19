@@ -12,12 +12,12 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          dark: '#190482',
-          light: '#7752FE',
+          dark: '#5356FF',
+          light: '#378CE7',
         },
         secondary: {
-          dark: '#8E8FFA',
-          light: '#C2D9FF',
+          dark: '#67C6E3',
+          light: '#DFF5FF',
         },
         neutral: {
           dark: colors.gray[200],
